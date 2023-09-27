@@ -27,7 +27,10 @@ const Current = ({data}: CurrentProps) => {
             <div >
                 <h1 className='text-3xl text-white'>Today</h1>
                 <p className='text-white'>{currentDate}</p>
-                <img src={weatherIcon} alt={data.current.condition.text} className='img-fluid w-[50px] object-cover'/>
+                {weatherIcon && (
+                    <div>  <img src={weatherIcon} alt="Weather Icon" className='img-fluid w-[50px] object-cover'/> </div>
+                )}
+               
             </div>
         </div>
         <div >
